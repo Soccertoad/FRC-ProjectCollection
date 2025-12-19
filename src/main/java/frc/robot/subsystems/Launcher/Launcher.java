@@ -8,7 +8,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Launcher extends SubsystemBase {
     /** Creates a new Turret. */
-    public Launcher() {}
+    public Launcher() {
+
+    }
 
     @Override
     public void periodic() {
