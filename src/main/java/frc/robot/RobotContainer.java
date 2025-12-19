@@ -6,15 +6,44 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import frc.robot.Constants.Mode;
+import frc.robot.subsystems.Launcher.Launcher;
+import frc.robot.subsystems.Launcher.Shooter.ShooterIO;
+import frc.robot.subsystems.Launcher.Turret.TurretIO;
 
 public class RobotContainer {
-  public RobotContainer() {
-    configureBindings();
-  }
 
-  private void configureBindings() {}
+    private final CommandXboxController operator = new CommandXboxController(1);
+    private final Launcher turret;
 
-  public Command getAutonomousCommand() {
-    return Commands.print("No autonomous command configured");
-  }
+    public RobotContainer() {
+        switch (Constants.CURRENT_MODE) {
+            case REAL -> {
+                turret = new Launcher(null, null);
+            }
+            
+            case SIM -> {
+                turret = new Launcher(null, null);
+            }
+
+            case REPLAY -> {
+                turret = new Launcher(
+                    new TurretIO() {}, 
+                    new ShooterIO() {}
+                );
+            }
+
+            default -> { 
+                turret = new Launcher(null, null);
+            }
+        }
+        configureBindings();
+    }
+
+    private void configureBindings() {}
+
+    public Command getAutonomousCommand() {
+        return Commands.print("No autonomous command configured");
+    }
 }
