@@ -49,4 +49,14 @@ public interface MotorIO {
 
     default void setGains(Gains gains) {}
 
+/* Things to add
+
+go to set point 
+stop 
+set position/encoder value
+follow
+voltage control
+*/
+
+
 }
