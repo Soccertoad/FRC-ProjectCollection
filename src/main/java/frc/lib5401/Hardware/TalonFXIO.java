@@ -1,4 +1,4 @@
-package frc.lib5401.Subsystems;
+package frc.lib5401.Hardware;
 
 import static edu.wpi.first.units.Units.Meters;
 
@@ -13,8 +13,8 @@ import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
 import frc.lib5401.CANDeviceID;
 import frc.lib5401.GainUtil.Gains;
-import frc.lib5401.Subsystems.MotorIOConfig.TalonFXConfig;
-import frc.lib5401.Subsystems.MotorIOInputs.MotorInputs;
+import frc.lib5401.Hardware.MotorIOConfig.TalonFXConfig;
+import frc.lib5401.Hardware.MotorIOInputs.MotorInputs;
 
 public class TalonFXIO implements MotorIO{
     

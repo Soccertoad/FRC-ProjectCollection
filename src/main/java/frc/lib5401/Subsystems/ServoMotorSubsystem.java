@@ -3,6 +3,8 @@
 package frc.lib5401.Subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.lib5401.Hardware.MotorIO;
+import frc.lib5401.Hardware.MotorIOInputs;
 
 public class ServoMotorSubsystem<T extends MotorIO, U extends MotorIOInputs> extends SubsystemBase {
 

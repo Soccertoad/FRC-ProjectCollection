@@ -3,8 +3,13 @@
 package frc.lib5401.Subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.lib5401.Hardware.MotorIO;
+import frc.lib5401.Hardware.MotorIOInputs;
 
 public class ContinuousMotorSubsystem<T extends MotorIO, U extends MotorIOInputs> extends SubsystemBase{
+
+    protected T motor;
+    protected U motorInputs;
 
     public ContinuousMotorSubsystem(){
 
@@ -12,7 +17,7 @@ public class ContinuousMotorSubsystem<T extends MotorIO, U extends MotorIOInputs
 
     @Override
     public void periodic(){
-        
+
     }
     
 }

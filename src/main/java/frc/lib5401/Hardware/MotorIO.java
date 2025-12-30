@@ -1,4 +1,4 @@
-package frc.lib5401.Subsystems;
+package frc.lib5401.Hardware;
 
 import static edu.wpi.first.units.Units.Degrees;
 import static edu.wpi.first.units.Units.Meters;
@@ -7,7 +7,7 @@ import static edu.wpi.first.units.Units.RotationsPerSecond;
 import edu.wpi.first.units.measure.Distance;
 import frc.lib5401.CANDeviceID;
 import frc.lib5401.GainUtil.Gains;
-import frc.lib5401.Subsystems.MotorIOInputs.MotorInputs;
+import frc.lib5401.Hardware.MotorIOInputs.MotorInputs;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
 
