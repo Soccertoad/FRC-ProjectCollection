@@ -5,19 +5,23 @@ import static edu.wpi.first.units.Units.Meters;
 import static edu.wpi.first.units.Units.RotationsPerSecond;
 
 import edu.wpi.first.units.measure.Distance;
+import frc.lib5401.CANDeviceID;
 import frc.lib5401.GainUtil.Gains;
+import frc.lib5401.Subsystems.MotorIOInputs.MotorInputs;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
 
 public interface MotorIO {
 
-    default void updateInputs(MotorIOInputs inputs) {}
+    void updateInputs(MotorInputs inputs);
+
+    void set(double speed);
 
     /**
      * 
      * @param percent -1 to 1
      */
-    default void setDutyCycle(double percent) {}
+    void setDutyCycle(double percent);
 
     /**
      * 
@@ -27,14 +31,32 @@ public interface MotorIO {
         setVelocity(velocity.in(RotationsPerSecond));
     }
 
-    default void setVelocity(double velocity) {}
+    void setVelocity(double velocity);
+
+        /**
+     * 
+     * @param angle degrees
+     */
+    default void setPosition(Angle angle, int slot){
+        setPosition(angle.in(Degrees), slot);
+    }
+
+    /**
+     * 
+     * @param distance meters
+     */
+    default void setPosition(Distance distance, int slot) {
+        setPosition(distance.in(Meters), slot);
+    }
+
+    void setPosition(double position, int slot);
 
     /**
      * 
      * @param angle degrees
      */
     default void setPosition(Angle angle){
-        setPosition(angle.in(Degrees));
+        setPosition(angle, 0);
     }
 
     /**
@@ -42,21 +64,23 @@ public interface MotorIO {
      * @param distance meters
      */
     default void setPosition(Distance distance) {
-        setPosition(distance.in(Meters));
+        setPosition(distance, 0);
     }
 
-    default void setPosition(double position) {}
+    default void setPosition(double position) {
+        setPosition(position, 0);
+    }
 
-    default void setGains(Gains gains) {}
+    void setVoltage(double voltage);
 
-/* Things to add
+    void setGains(Gains gains);
 
-go to set point 
-stop 
-set position/encoder value
-follow
-voltage control
-*/
+    default void stop() {
+        set(0.0);
+    }
 
+    void setEncoder(double position);
+
+    void follow(CANDeviceID leader, boolean opposeLeaderDirection);
 
 }
