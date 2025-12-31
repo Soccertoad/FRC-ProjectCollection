@@ -1,4 +1,4 @@
-package frc.lib5401.Hardware;
+package frc.lib5401.HardwareIOs;
 
 import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.units.measure.MutAngularVelocity;

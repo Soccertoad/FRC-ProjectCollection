@@ -1,4 +1,4 @@
-package frc.lib5401.Hardware;
+package frc.lib5401.HardwareIOs;
 
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 

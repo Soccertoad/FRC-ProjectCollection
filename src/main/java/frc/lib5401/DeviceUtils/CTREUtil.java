@@ -1,4 +1,4 @@
-package frc.lib5401;
+package frc.lib5401.DeviceUtils;
 
 import java.util.function.Supplier;
 
