@@ -7,4 +7,6 @@ public class ServoMotorSubsystemConfig {
     public MotorConfig config;
     public double minRotation;
     public double maxRotation;
+
+    public String subsystemName = "NameMe";
 }
