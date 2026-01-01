@@ -1,5 +1,7 @@
 package frc.lib5401.DeviceUtils;
 
+import com.ctre.phoenix6.CANBus;
+
 public class CANDeviceID {
     private final int DEVICE_ID;
     private final String BUS_NAME;
@@ -28,5 +30,9 @@ public class CANDeviceID {
 
     public String getBusName(){
         return BUS_NAME;
+    }
+
+    public CANBus getCTRECANBus(){
+        return new CANBus(BUS_NAME);
     }
 }

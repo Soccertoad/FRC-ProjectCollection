@@ -12,6 +12,7 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
 import frc.lib5401.DeviceUtils.CANDeviceID;
+import frc.lib5401.DeviceUtils.CTREUtil;
 import frc.lib5401.GainUtil.Gains;
 import frc.lib5401.HardwareIOs.MotorIOConfig.TalonFXConfig;
 import frc.lib5401.HardwareIOs.MotorIOInputs.MotorInputs;
@@ -29,8 +30,8 @@ public class TalonFXIO implements MotorIO{
 
     public TalonFXIO(TalonFXConfig config){
         this.config = config;
-        this.talon = new TalonFX(config.CAN_BUS.getDeviceID(), config.CAN_BUS.getBusName());
-        this.talon.getConfigurator().apply(config.configFX);
+        this.talon = new TalonFX(config.CAN_BUS.getDeviceID(), config.CAN_BUS.getCTRECANBus());
+        CTREUtil.talonConfigCheckUntilOkay(talon, config.configFX);
         
     }
 
@@ -104,7 +105,7 @@ public class TalonFXIO implements MotorIO{
 
     @Override
     public void setGains(Gains gains) {
-
+        
     }
 
     @Override
