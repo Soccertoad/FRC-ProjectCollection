@@ -14,8 +14,8 @@ import edu.wpi.first.units.measure.AngularVelocity;
 import frc.lib5401.DeviceUtils.CANDeviceID;
 import frc.lib5401.DeviceUtils.CTREUtil;
 import frc.lib5401.GainUtil.Gains;
-import frc.lib5401.HardwareIOs.MotorIOConfig.TalonFXConfig;
 import frc.lib5401.HardwareIOs.MotorIOInputs.MotorInputs;
+import frc.lib5401.HardwareIOs.MotorIOConfigs.TalonFXConfig;
 
 public class TalonFXIO implements MotorIO{
     

@@ -14,4 +14,5 @@ public class CommonConstants {
 
     public static final boolean kIsCompetition = DriverStation.isFMSAttached();
     public static final boolean kIsLiveTuning = kIsCompetition ? false : true; // To disable live tuning during home use change true to false 
+
 }
