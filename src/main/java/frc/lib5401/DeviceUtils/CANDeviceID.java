@@ -1,4 +1,4 @@
-package frc.lib5401;
+package frc.lib5401.DeviceUtils;
 
 public class CANDeviceID {
     private final int DEVICE_ID;

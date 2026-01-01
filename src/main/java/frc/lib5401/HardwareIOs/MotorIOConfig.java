@@ -2,7 +2,7 @@ package frc.lib5401.HardwareIOs;
 
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 
-import frc.lib5401.CANDeviceID;
+import frc.lib5401.DeviceUtils.CANDeviceID;
 
 public class MotorIOConfig {
 

@@ -11,7 +11,7 @@ import com.ctre.phoenix6.hardware.TalonFX;
 
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
-import frc.lib5401.CANDeviceID;
+import frc.lib5401.DeviceUtils.CANDeviceID;
 import frc.lib5401.GainUtil.Gains;
 import frc.lib5401.HardwareIOs.MotorIOConfig.TalonFXConfig;
 import frc.lib5401.HardwareIOs.MotorIOInputs.MotorInputs;
