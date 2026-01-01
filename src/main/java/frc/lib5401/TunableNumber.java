@@ -7,7 +7,6 @@ import edu.wpi.first.networktables.DoubleEntry;
 import edu.wpi.first.networktables.DoubleTopic;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import frc.lib5401.CommonConstants;
 
 public class TunableNumber implements DoubleSupplier {
     private static final String DIRECTORY = "/Tunable";

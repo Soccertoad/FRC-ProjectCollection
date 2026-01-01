@@ -1,7 +1,6 @@
 package frc.lib5401;
 
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.RobotBase;
 import frc.robot.Robot;
 
 public class CommonConstants {
