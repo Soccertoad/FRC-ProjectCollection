@@ -6,7 +6,7 @@ import static edu.wpi.first.units.Units.RotationsPerSecond;
 
 import edu.wpi.first.units.measure.Distance;
 import frc.lib5401.DeviceUtils.CANDeviceID;
-import frc.lib5401.GainUtil.Gains;
+import frc.lib5401.Gains;
 import frc.lib5401.HardwareIOs.MotorIOInputs.MotorInputs;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
